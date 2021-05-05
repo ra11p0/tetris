@@ -24,12 +24,21 @@ public class KeyActions extends KeyAdapter {
             case KeyEvent.VK_UP:
                 _target.rotate();
                 break;
+            case KeyEvent.VK_DOWN:
+                _target.timer.setDelay(50);
+                break;
         }
-
-
-
         _target.repaint();
-        //_target.setBackground(Color.white);
-        //_target.temp = e.toString();
+    }
+    @Override
+    public void keyReleased (KeyEvent e)
+    {
+        switch(e.getKeyCode())
+        {
+            case KeyEvent.VK_DOWN:
+                _target.timer.setDelay(_target.tickTime);
+                break;
+        }
+        _target.repaint();
     }
 }
