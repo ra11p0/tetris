@@ -21,6 +21,9 @@ public class KeyActions extends KeyAdapter {
             case KeyEvent.VK_RIGHT:
                 _target.moveRight();
                 break;
+            case KeyEvent.VK_UP:
+                _target.rotate();
+                break;
         }
 
 
